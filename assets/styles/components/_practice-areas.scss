@@ -1,0 +1,32 @@
+$module: 'practice-areas';
+
+.#{$module} {
+  &__nav {
+    list-style: none;
+    padding-left: 0;
+
+    &--item {
+      padding: 5px 0;
+      color: $purple;
+
+      &:hover {
+        color: $midnight;
+        cursor: hand;
+        cursor: pointer;
+        text-decoration: underline;
+      }
+
+      &-active {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__section {
+    display: none;
+
+    &--active {
+      display: block;
+    }
+  }
+}

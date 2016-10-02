@@ -1,0 +1,44 @@
+$module: 'content-info';
+
+.#{$module} {
+  a, a:hover, a:active, a:focus {
+    color: $gray;
+    text-decoration: underline;
+  }
+
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  #contact-info {
+    background: $midnight;
+    padding: 20px 0;
+    text-align: center;
+
+    p {
+      color: $white;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    a {
+      color: $purple;
+      a:hover, a:active, a:focus {
+        color: $purple;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #copyright {
+    background: $black;
+    p {
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .alignleft, .alignright {
+    margin: 1em 20px 0;
+  }
+}

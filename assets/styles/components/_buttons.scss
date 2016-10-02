@@ -1,0 +1,83 @@
+$module: 'button';
+
+.#{$module} {
+  &__cat {
+    border: 1px solid $black;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 1em;
+    padding: 5px 15px 4px;
+    transition: all, .1s;
+
+    &:active, &:hover, &:focus {
+      background: $purple;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__cta {
+    background: $white;
+    border-radius: 4px;
+    color: $purple;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1em;
+    padding: 12px 24px 10px;
+    transition: all, .1s;
+
+    &:active, &:hover, &:focus {
+      background: $purple;
+      color: $white;
+      text-decoration: none;
+    }
+
+    &-purple {
+      background: $purple;
+      border-radius: 4px;
+      color: $white;
+
+      &:active, &:hover, &:focus {
+        background: $white;
+        border: 1px solid $purple;
+        color: $purple;
+        padding: 11px 23px;
+
+        a {
+          color: $purple;
+        }
+      }
+    }
+    &-purple a {
+      color: $white;
+      &:active, &:hover, &:focus {
+        color: $purple;
+        text-decoration: none;
+      }
+    }
+  }
+  &__iBooks {
+    display: inline-block;
+    margin: 0.85em 0 0;
+    position: relative;
+    top: 1.2em;
+  }
+}
+
+.hero #{$module}__cta {
+  &-purple {
+    &:active, &:hover, &:focus {
+      border: 0;
+      padding: 12px 24px 10px;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .#{$module} {
+    &__iBooks {
+      top: 0;
+    }
+  }
+}
