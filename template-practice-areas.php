@@ -9,6 +9,9 @@ while ( have_posts() ) : the_post();
   $practice_areas = get_children( array(
     'post_parent' => $post->post_parent,
   ));
+  usort( $practice_areas, function( $a, $b ) {
+    return strcmp( $a->post_title, $b->post_title );
+  });
   $featured_posts = get_post_meta( $id, 'featured_posts' )[0];
 ?>
 
