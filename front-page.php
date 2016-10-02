@@ -38,19 +38,3 @@
     </div>
   <? } ?>
 </div>
-<div class="product">
-  <div class="container-fluid">
-    <div class="col-sm-4">
-      <img src="<?php echo esc_url( wp_get_attachment_image_src( $product['image'], 'full' )[0] ); ?>" />
-    </div>
-    <div class="col-sm-7 col-sm-offset-1">
-      <div class="hero__description">
-        <h3> <?php echo wp_kses_post( $product['header_text'] ); ?></h3>
-        <?php echo wp_kses_post( $product['header_description'] ); ?>
-      </div>
-      <a href="<?php echo esc_url( get_the_permalink( $product['cta']['link'] ) ); ?>" class="button__cta button__cta-purple">
-        <?php echo wp_kses_post( $product['cta']['text'] ); ?>
-      </a>
-    </div>
-  </div>
-</div>
