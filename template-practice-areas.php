@@ -5,12 +5,15 @@
 while ( have_posts() ) : the_post();
   $id = get_the_ID();
   $hero = get_post_meta( $id, 'content_header')[0];
-  $practice_areas = get_post_meta( $id, 'practice_areas' )[0];
+  $content = get_post_meta( $id, 'practice_area_content' )[0];
+  $practice_areas = get_children( array(
+    'post_parent' => $post->post_parent,
+  ));
   $featured_posts = get_post_meta( $id, 'featured_posts' )[0];
 ?>
 
-  <div id="content-header" class="hero">
-    <div class="container-fluid">
+  <div id="content-header" class="practice-areas__hero hero">
+    <div class="centered">
       <h2><?php echo wp_kses_post( get_the_title() ); ?></h2>
       <p><?php echo wp_kses_post( $hero['description'] ); ?></p>
     </div>
@@ -19,25 +22,16 @@ while ( have_posts() ) : the_post();
     <div class="container-fluid">
       <div class="row">
         <div class="col-md-4 col-lg-3">
-          <h3>Practice Areas</h3>
+          <h3>Specialties</h3>
           <ul class="practice-areas__nav">
-            <?php $first = true;
-            foreach ($practice_areas as $area) { ?>
-              <li data-title="<?php echo wp_kses_post( $area['title'] ); ?>" class="practice-areas__nav--item<?php if ($first) echo ' practice-areas__nav--item-active'; ?>"><?php echo wp_kses_post( $area['title'] ); ?>
-            <?php $first = false;
-            } ?>
+            <?php foreach ($practice_areas as $area) { ?>
+              <li class="practice-areas__nav--item<?php if ( $id === $area->ID ) echo ' practice-areas__nav--item-active'; ?>">
+                <a href="<?php echo esc_url( get_permalink( $area->ID ) ); ?>"><?php echo wp_kses_post( $area->post_title ); ?></a>
+            <?php } ?>
           </ul>
         </div>
         <div class="col-md-8 col-lg-9 practice-areas__container">
-          <?php $first = true;
-          foreach ($practice_areas as $area) { ?>
-            <div data-title="<?php echo wp_kses_post( $area['title'] ); ?>" class="practice-areas__section<?php if ($first) echo ' practice-areas__section--active'; ?>">
-              <h3 class="practice-areas__title"><?php echo wp_kses_post( $area['title'] ); ?></h3>
-              <?php echo wp_kses_post( $area['content']); ?>
-              <p><a href="<?php echo esc_url( get_permalink( $area['link'] ) ); ?>">Learn More about <?php echo wp_kses_post( $area['title'] ); ?></a></p>
-            </div>
-          <?php $first = false;
-          } ?>
+          <?php echo wp_kses_post( $content ); ?>
         </div>
       </div>
     </div>
