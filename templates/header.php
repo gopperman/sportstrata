@@ -1,6 +1,6 @@
 <header class="banner">
   <div class="container-fluid">
-    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><?php bloginfo('name'); ?></a>
+    <a class="brand" href="<?= esc_url(home_url('/')); ?>"><img src="/app/themes/sportstrata/assets/images/sportstrata-logo.png" alt="SportStrata" /></a>
     <nav class="nav-primary">
       <div class="navbar-header">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".menu-primary-navigation-container">
