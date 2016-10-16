@@ -1,6 +1,89 @@
 $module: 'practice-areas';
 
+.business {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/business-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
+.first-responders {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/firstresponder-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
+.gaming-e-sports {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/gaming-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
+.healthcare {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/healthcare-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
+.performing-artists {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/performance-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
+.sports {
+  .#{$module} {
+    &__hero {
+      background: url(#{$asset-path}images/sports2-sm.jpg) no-repeat center center;
+      @include cover();
+    }
+  }
+}
+
 .#{$module} {
+  &__hero {
+    background: url(#{$asset-path}images/business-sm.jpg) no-repeat center center;
+    position: relative;
+    text-align: center;
+    @include cover();
+
+    &.hero {
+      margin: 0 0 30px 0;
+      min-height: 95vw;
+    }
+
+    .centered {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    p {
+      margin: 1em auto;
+      max-width: 75%;
+    }
+
+    h2, p {
+      color: $white;
+    }
+  }
+
   &__nav {
     list-style: none;
     padding-left: 0;
@@ -27,6 +110,25 @@ $module: 'practice-areas';
 
     &--active {
       display: block;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .#{$module} {
+    &__hero.hero {
+      min-height: 48vw;
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .#{$module} {
+    &__hero {
+      background-attachment: fixed;
+      &.hero {
+        min-height: 32vw;
+      }
     }
   }
 }
