@@ -27,8 +27,32 @@ $media: 'page-template-template-media';
   }
 }
 
-.content-areas {
-  background: $white;
+.availability-strip, .clients {
+  background: $gray-light;
+  margin-bottom: 25px;
+  text-align: center;
+
+  p, div {
+    color: $gray;
+    line-height: 57px;
+    margin: 0 auto;
+  }
+
+  img {
+    display: inline-block;
+    margin: 1em;
+    vertical-align: middle;
+  }
+}
+
+.clients {
+  margin: 0;
+  padding: 25px 0;
+
+  p {
+    line-height: 1em;
+    margin-top: .6em;
+  }
 }
 
 .content__area {
@@ -43,15 +67,27 @@ $media: 'page-template-template-media';
   }
 
   &:first-child {
-    background: url(#{$asset-path}images/practicearea-sports.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(2) {
-    background: url(#{$asset-path}images/practicearea-mit.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
     @include cover();
   }
-  &:last-child {
-    background: url(#{$asset-path}images/practicearea-cbt.jpg) no-repeat center center;
+  &:nth-child(3) {
+    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(4) {
+    background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(5) {
+    background: url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(6) {
+    background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
     @include cover();
   }
 
@@ -71,20 +107,21 @@ $media: 'page-template-template-media';
     margin-top: 1em;
   }
 
-  .hero__video {
-    display: none;
-  }
-
   .hero {
-    background: url(#{$asset-path}/images/home-hero.jpg) no-repeat center center fixed;
+    background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
     margin: 0;
     padding: $nav-offset 25px 25px;
     position: relative;
     text-align: left;
     @include cover();
 
+    h1 {
+      font-size: 42px;
+    }
+
     h2 {
       margin-top: 0;
+      max-width: 70%;
     }
 
     .centered {
@@ -121,26 +158,10 @@ $media: 'page-template-template-media';
 
 }
 .#{$book} {
-	.hero {
-		background: url(#{$asset-path}images/book-hero.jpg) no-repeat center center fixed;
+  .hero {
+    background: url(#{$asset-path}images/book-hero.jpg) no-repeat center center fixed;
     margin: $nav-offset 0 0 0;
     @include cover();
-  }
-  .availability-strip {
-    background: $gray-light;
-    margin-bottom: 25px;
-    text-align: center;
-
-    p {
-      line-height: 57px;
-      margin: 0 auto;
-    }
-
-    img {
-      display: inline-block;
-      margin: 1em;
-      vertical-align: middle;
-    }
   }
 }
 
@@ -327,27 +348,17 @@ $media: 'page-template-template-media';
 @media only screen and (min-width: 992px) {
   .#{home} {
     .hero {
-      background: rgba($midnight,.7);
-      text-align: center;
-
       h1, h2 {
         color: $white;
       }
+
+      h2 {
+        max-width: 100%;
+      }
+
       .centered {
         width: 100%;
       }
-    }
-    .hero__video {
-      display: block;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -100;
-      transform: translate(-50%, -50%);
     }
   }
   .#{$book} {
