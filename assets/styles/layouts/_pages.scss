@@ -1,5 +1,4 @@
 $home:  'home';
-$book:  'page-template-template-book';
 $media: 'page-template-template-media';
 
 .page {
@@ -157,15 +156,7 @@ $media: 'page-template-template-media';
   }
 
 }
-.#{$book} {
-  .hero {
-    background: url(#{$asset-path}images/book-hero.jpg) no-repeat center center fixed;
-    margin: $nav-offset 0 0 0;
-    @include cover();
-  }
-}
 
-.#{$book} .hero,
 .product {
   text-align: center;
 
@@ -194,43 +185,7 @@ $media: 'page-template-template-media';
   }
 }
 
-.product {
-  background: $white;
-  padding: 50px 0 25px;
-
-  p {
-    color: $gray;
-  }
-
-  .button__cta {
-    margin-top: 1em;
-  }
-}
-
-.excerpts {
-  text-align: center;
-
-  h4 {
-    margin: 2em 0 0;
-    a {
-      color: $purple;
-      &:active, &:hover, &:focus {
-        color: $purple;
-      }
-    }
-  }
-  p {
-    margin: 0;
-  }
-  a {
-    color: $black;
-    &:active, &:hover, &:focus {
-      color: $black;
-      text-decoration: underline;
-    }
-  }
-}
-.testimonials, .featured-posts {
+.featured-posts {
   margin-top: 20px;
   padding-bottom: 50px;
 
@@ -292,11 +247,6 @@ $media: 'page-template-template-media';
   }
 }
 @media only screen and (min-width: 768px) {
-  .#{$book} .hero,
-  .product {
-    text-align: left;
-  }
-
   .hero {
     min-height: 36vw;
   }
@@ -304,20 +254,6 @@ $media: 'page-template-template-media';
   .#{$home} {
     .hero {
       min-height: 90vh;
-    }
-  }
-
-  .#{$book} {
-    .button__cta,
-    .button__iBooks {
-      float: left;
-      margin-right: 10px;
-    }
-
-    .hero {
-      .button__cta {
-        margin-top:1em;
-      }
     }
   }
 
@@ -359,11 +295,6 @@ $media: 'page-template-template-media';
       .centered {
         width: 100%;
       }
-    }
-  }
-  .#{$book} {
-    .hero__description {
-      padding-top: 50px;
     }
   }
 
