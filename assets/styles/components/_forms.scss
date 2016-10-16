@@ -17,7 +17,7 @@
 // Contact Form
 $contact: 'contact';
 
-##{contact} {
+##{$contact} {
   background: $white;
   z-index: 999999;
 }
@@ -46,7 +46,7 @@ $contact: 'contact';
     border-bottom: 0;
 
     .close {
-      color: $midnight;
+      color: $black;
       font-size: 60px;
       position: absolute;
       right: 10px;
@@ -67,7 +67,7 @@ $contact: 'contact';
     }
 
     p {
-      color: $purple;
+      color: $navy;
       font-size: 24px;
       margin: .5em 0;
       position: relative;
@@ -88,7 +88,7 @@ $contact: 'contact';
   &-text {
     background: transparent;
     border: 0;
-    border-bottom: 3px solid $purple;
+    border-bottom: 3px solid $navy;
     color: $black;
     position: relative;
     width: 100%;
@@ -103,7 +103,7 @@ $contact: 'contact';
   }
 
   &-textarea {
-    border: 2px $purple dotted;
+    border: 2px $navy dotted;
     height: 120px;
     width: 100%;
 
@@ -112,17 +112,16 @@ $contact: 'contact';
     }
   }
   &-submit {
-    background: $purple;
+    background: $red;
     border: 0;
     border-radius: 4px;
     color: $white;
     float: right;
-    font-family: 'Hind', sans-serif;
-    font-size: 18px;
+    @include din(18px);
     padding: 0 24px;
     transition: all, .2s;
     &:hover, &:active {
-      background: darken( $purple, 10% );
+      background: darken( $red, 10% );
     }
   }
 }

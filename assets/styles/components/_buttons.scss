@@ -29,49 +29,9 @@ $module: 'button';
     transition: all, .1s;
 
     &:active, &:hover, &:focus {
-      background: $transparent;
+      background: transparent;
       color: $red;
       text-decoration: none;
-    }
-
-    &-purple {
-      background: $purple;
-      border-radius: 4px;
-      color: $white;
-
-      &:active, &:hover, &:focus {
-        background: $white;
-        border: 1px solid $purple;
-        color: $purple;
-        padding: 11px 23px;
-
-        a {
-          color: $purple;
-        }
-      }
-    }
-    &-purple a {
-      color: $white;
-      &:active, &:hover, &:focus {
-        color: $purple;
-        text-decoration: none;
-      }
-    }
-  }
-
-.hero #{$module}__cta {
-  &-purple {
-    &:active, &:hover, &:focus {
-      border: 0;
-      padding: 12px 24px 10px;
-    }
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  .#{$module} {
-    &__iBooks {
-      top: 0;
     }
   }
 }

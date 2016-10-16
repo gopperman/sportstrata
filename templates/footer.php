@@ -16,7 +16,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body">
-        <?php echo do_shortcode( '[contact-form-7 id="1173" title="Contact SportStrata"]' ); ?>
+        <?php echo do_shortcode( '[contact-form-7 id="4" title="Contact SportStrata"]' ); ?>
       </div>
     </div>
 
