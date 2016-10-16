@@ -1,23 +1,26 @@
 h1 {
-  @include hind(48px, 700);
+  @include dense(2.4px);
   margin-top: .2em;
 }
 
 h2 {
-  @include hind(24px, 700);
+  @include dense(1.6em);
 }
 
 h3 {
-  @include hind(21px, 700);
+  @include dense(1.2em);
 }
 
 h4 {
-  @include hind(14px, 700);
-  color: $blue;
+  @include din(1.1em);
 }
 
 h5 {
-  @include hind(14px, 500);
+  @include din(1em);
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
 }
 
 p {

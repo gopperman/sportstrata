@@ -96,7 +96,6 @@ function display_sidebar() {
  */
 function assets() {
   wp_enqueue_style( 'sage/css', Assets\asset_path( 'styles/main.css' ), false, null );
-  wp_enqueue_style( 'font/hind', '//fonts.googleapis.com/css?family=Hind:400,600', false, null );
   //wp_enqueue_script( 'sage/js', Assets\asset_path( 'scripts/jquery.js' ), [], null, true );
   wp_enqueue_script( 'sage/js', Assets\asset_path( 'scripts/main.js' ), [ 'jquery' ], null, true );
 }
