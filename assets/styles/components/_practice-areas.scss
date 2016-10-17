@@ -55,6 +55,13 @@ $module: 'practice-areas';
 }
 
 .#{$module} {
+  padding-top: 20px;
+
+  h3 {
+    @include dense(1.6em);
+    margin-top: 0;
+  }
+
   &__hero {
     background: url(#{$asset-path}images/business-sm.jpg) no-repeat center center;
     position: relative;
@@ -74,9 +81,20 @@ $module: 'practice-areas';
       width: 100%;
     }
 
+    h2 {
+      @include din(10vw);
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+
     p {
+      @include dense(5vw);
+      border: 4px solid $white;
+      display: inline-block;
       margin: 1em auto;
       max-width: 75%;
+      padding: 0 1em;
+      text-transform: uppercase;
     }
 
     h2, p {
@@ -90,13 +108,14 @@ $module: 'practice-areas';
 
     &--item {
       padding: 5px 0;
-      color: $purple;
+      color: $navy;
+      @include din(1.1em);
 
       &:hover {
-        color: $midnight;
+        color: $black;
         cursor: hand;
         cursor: pointer;
-        text-decoration: underline;
+        font-size: 1.2em;
       }
 
       &-active {
@@ -116,8 +135,16 @@ $module: 'practice-areas';
 
 @media only screen and (min-width: 768px) {
   .#{$module} {
-    &__hero.hero {
-      min-height: 48vw;
+    &__hero {
+      h2 {
+        font-size: 75px;
+      }
+      p {
+        font-size: 28px;
+      }
+      &.hero {
+        min-height: 48vw;
+      }
     }
   }
 }

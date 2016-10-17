@@ -17,8 +17,8 @@ while ( have_posts() ) : the_post();
 
   <div id="content-header" class="practice-areas__hero hero">
     <div class="centered">
-      <h2><?php echo wp_kses_post( get_the_title() ); ?></h2>
       <p><?php echo wp_kses_post( $hero['description'] ); ?></p>
+      <h2><?php echo wp_kses_post( get_the_title() ); ?></h2>
     </div>
   </div>
   <div class="practice-areas">
