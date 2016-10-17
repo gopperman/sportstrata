@@ -11,20 +11,24 @@ $black:         #001727;
 $navy:          #002742;
 $mint:          #e3f2f0;
 $seafoam:       #f1f9f9;
-$coral:           #f10000;
-$red:      #ff0000;
+$red:           #f10000;
+$true-red:      #ff0000;
 $white:         #fff;
 
 $midnight:      #303e53;
 $gray:          #676d76;
 $gray-light:    #f0f0f0;
 $purple:        #6472cc;
-$red:           #eb7786;
 $blue:          #5da9fb;
 $yellow:        #f7c033;
 
 //Constraints
 $constrain-home: 900px;
+
+//Font Families
+$lato: 'Lato', sans-serif;
+$dense: 'Dense', sans-serif;
+$din: 'DIN', sans-serif;
 
 // Etc
 $nav-offset: 40px;

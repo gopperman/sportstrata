@@ -1,31 +1,26 @@
 $module: 'content-info';
 
 .#{$module} {
-  a, a:hover, a:active, a:focus {
-    color: $gray;
-    text-decoration: underline;
-  }
-
   p {
     font-size: 14px;
     margin: 0;
   }
 
   #contact-info {
-    background: $midnight;
+    background: $navy;
     padding: 20px 0;
     text-align: center;
 
     p {
-      color: $white;
+      color: $seafoam;
       font-size: 1.4em;
       font-weight: bold;
     }
 
     a {
-      color: $purple;
+      color: $red;
       a:hover, a:active, a:focus {
-        color: $purple;
+        color: $red;
         text-decoration: underline;
       }
     }
@@ -33,7 +28,12 @@ $module: 'content-info';
 
   #copyright {
     background: $black;
+    a, a:active, a:focus, a:hover {
+      color: $mint;
+      text-decoration: underline;
+    }
     p {
+      color: $seafoam;
       display: inline-block;
       width: 100%;
     }

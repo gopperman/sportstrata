@@ -1,6 +1,6 @@
 body {
   padding-top: $nav-offset;
-  font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include lato(14px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

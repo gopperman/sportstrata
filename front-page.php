@@ -21,18 +21,21 @@
     <p><?php echo wp_kses_post( $about ); ?></p>
   </div>
 </div>
-<div class="content-areas row">
-  <?php foreach ( $content as $area ) { ?>
-    <div class="col-md-4 content__area">
-      <div class="content__area-title"><?php echo wp_kses_post( $area['header_text'] ); ?></div>
-      <div class="content__area-overlay hidden-md hidden-lg hidden-xl">
-        <div class="content__area-description">
-          <h2><?php echo wp_kses_post( $area['header_description'] ); ?></h2>
-          <a class="button__cta" href="<?php echo esc_url( get_the_permalink( $area['cta']['link'] ) ); ?>"><?php echo wp_kses_post( $area['cta']['text'] ); ?></a>
+<div class="content-areas">
+  <h2>Our Focus</h2>
+  <div class="content-areas__wrapper">
+    <?php foreach ( $content as $area ) { ?>
+      <div class="col-md-4 content__area">
+        <div class="content__area-title"><?php echo wp_kses_post( $area['header_text'] ); ?></div>
+        <div class="content__area-overlay hidden-md hidden-lg hidden-xl">
+          <div class="content__area-description">
+            <h2><?php echo wp_kses_post( $area['header_description'] ); ?></h2>
+            <a class="button__cta" href="<?php echo esc_url( get_the_permalink( $area['cta']['link'] ) ); ?>"><?php echo wp_kses_post( $area['cta']['text'] ); ?></a>
+          </div>
         </div>
       </div>
-    </div>
-  <?php } ?>
+    <?php } ?>
+  </div>
 </div>
 <div class="clients">
   <div class="container-fluid">

@@ -1,3 +1,8 @@
+//Font Families
+$lato: 'Lato', sans-serif;
+$dense: 'Dense', sans-serif;
+$din: 'DIN', sans-serif;
+
 @font-face {
   font-family: 'Dense';
   src: url(#{$asset-path}fonts/Dense-Regular.eot);
@@ -58,16 +63,24 @@
   font-style: normal;
 }
 
+@mixin lato($size) {
+  font-family: $lato;
+  font-size: $size;
+  font-weight: 300;
+}
+
 @mixin dense($size) {
-  font-family: 'Dense', sans-serif;
+  font-family: $dense;
   font-size: $size;
   font-weight: normal;
+  letter-spacing: 1px;
 }
 
 @mixin din($size) {
-  font-family: 'Dense', sans-serif;
+  font-family: $din;
   font-size: $size;
   font-weight: bold;
+  letter-spacing: 2.5px;
 }
 
 @mixin hind($size, $weight) {

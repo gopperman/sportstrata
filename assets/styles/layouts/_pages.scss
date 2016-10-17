@@ -1,5 +1,7 @@
 $home:  'home';
 $media: 'page-template-template-media';
+$gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
+$gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
 .page {
   padding-top: 0;
@@ -12,7 +14,9 @@ $media: 'page-template-template-media';
 }
 
 .about {
-  background: $purple;
+  background: $navy;
+  font-family: 'DIN', 'sans-serif';
+  font-weight: bold;
 
   .container-fluid {
     width: 80%;
@@ -20,7 +24,7 @@ $media: 'page-template-template-media';
   }
 
   p {
-    color: $white;
+    color: $seafoam;
     font-size: 24px;
     font-weight: 600;
   }
@@ -45,6 +49,7 @@ $media: 'page-template-template-media';
 }
 
 .clients {
+  clear: both;
   margin: 0;
   padding: 25px 0;
 
@@ -54,49 +59,68 @@ $media: 'page-template-template-media';
   }
 }
 
+.content-areas {
+  h2 {
+    text-align: center;
+  }
+}
 .content__area {
+  background-blend-mode: color-burn;
   color: $white;
   padding: 50px 10px;
   position: relative;
   text-align: center;
 
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .button__cta {
+    &:hover {
+      background: $navy;
+      border-color: $navy;
+      color: $white;
+    }
+  }
+
   &-title {
     font-size: 36px;
     font-weight: 600;
   }
-
-  &:first-child {
-    background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+  &:nth-child(1) {
+    background: url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(2) {
-    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(3) {
-    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(4) {
-    background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(5) {
-    background: url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(6) {
     background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
     @include cover();
-  }
-
-  h2 {
-    margin-bottom: 20px;
   }
 }
 
 .#{$home} {
-  .banner {
+  .banner, .hero {
     .container-fluid {
       max-width: $constrain-home;
     }
@@ -115,12 +139,16 @@ $media: 'page-template-template-media';
     @include cover();
 
     h1 {
-      font-size: 42px;
+      @include din(1em);
+      color: $white;
+      margin-bottom: 0;
     }
 
     h2 {
+      @include dense(2em);
+      color: $white;
       margin-top: 0;
-      max-width: 70%;
+      max-width: 85%;
     }
 
     .centered {
@@ -254,6 +282,17 @@ $media: 'page-template-template-media';
   .#{$home} {
     .hero {
       min-height: 90vh;
+      h1 {
+        @include din(1.4em);
+        color: $white;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        @include dense(4em);
+        color: $white;
+        margin-top: 0;
+      }
     }
   }
 
@@ -282,26 +321,11 @@ $media: 'page-template-template-media';
 }
 
 @media only screen and (min-width: 992px) {
-  .#{home} {
-    .hero {
-      h1, h2 {
-        color: $white;
-      }
-
-      h2 {
-        max-width: 100%;
-      }
-
-      .centered {
-        width: 100%;
-      }
-    }
-  }
-
   .content__area {
     height: 33.3vw;
     padding: 30px 0;
     &-overlay {
+      background: rgba( $mint, .3 );
       opacity: 0;
       transition: all, .4s;
       z-index: 999;
@@ -317,21 +341,11 @@ $media: 'page-template-template-media';
         display: inline-block !important;
       }
     }
-    &:first-child {
-      .content__area-overlay {
-        background: rgba( darken( $blue, 20% ), .7 );
-      }
+
+    &-description {
+      width: 80%;
     }
-    &:nth-child(2) {
-      .content__area-overlay {
-        background: rgba( $yellow, .7 );
-      }
-    }
-    &:last-child {
-      .content__area-overlay {
-        background: rgba( darken( $red, 20% ), .7 );
-      }
-    }
+
     &-description,
     &-title {
       opacity: 1;

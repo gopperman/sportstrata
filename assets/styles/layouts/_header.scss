@@ -1,6 +1,5 @@
 .banner {
   background: $white;
-  border-bottom: 1px solid rgba($midnight, .4);
   color: $black;
   height: 42px;
   opacity: .95;
@@ -24,11 +23,14 @@
 }
 
 .nav {
-  li>a:focus,
-  li>a:hover {
-    background: $purple;
-    color: $white;
-    transition: all, .2s;
+  li>a {
+    padding: 11px 15px;
+    &:focus,
+    &:hover {
+      background: $navy;
+      color: $white;
+      transition: all, .2s;
+   }
   }
 
   &-primary {
@@ -39,7 +41,7 @@
 
 .navbar {
   &-toggle {
-    border: 1px solid $midnight;
+    border: 1px solid $navy;
     margin: 5px 0 0;
     padding: 6px;
     position: relative;
@@ -60,7 +62,9 @@
   a {
     @include link-style();
     @include nav-link-style();
+    @include din(1em);
     padding: 0 15px;
+    text-transform: uppercase;
   }
 }
 
