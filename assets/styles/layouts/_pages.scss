@@ -1,5 +1,6 @@
 $home:  'home';
 $media: 'page-template-template-media';
+$team: 'page-template-template-team';
 $gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
 $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
@@ -119,7 +120,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
   }
 }
 
-.#{$home} {
+.#{$home}, .#{$team} {
   .banner, .hero {
     .container-fluid {
       max-width: $constrain-home;
@@ -156,6 +157,47 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       top: 50%;
       transform: translateY(-50%);
       width: 80%;
+    }
+  }
+}
+
+.#{$team} {
+  .team {
+    &__member {
+      background: $gray-light;
+      border-left: 4px solid $red;
+      padding: 0;
+      position: relative;
+    }
+
+    .row {
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      @include din(2.4em);
+      color: $black;
+    }
+
+    h3, h4 {
+      padding-left: 15px;
+    }
+
+    h3 {
+      @include din(1.4em);
+      color: $navy;
+      margin: .8em 0 0 0;
+    }
+
+    h4 {
+      @include dense(1.4em);
+      color: $red;
+      margin: 0 0 .8em 0;
+
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -279,7 +321,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     min-height: 36vw;
   }
 
-  .#{$home} {
+  .#{$home}, .#{$team} {
     .hero {
       min-height: 90vh;
       h1 {
