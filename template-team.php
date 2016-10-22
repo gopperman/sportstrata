@@ -40,7 +40,9 @@ $teams = array(
                 <a class="team__member-link" href="<?php echo get_permalink($member->ID); ?>">
                   <img src="<?php echo esc_url( wp_get_attachment_image_src( $fields['external_content_headshot'][0], 'medium' )[0] ); ?>" />
                 </a>
-                <h3><?php echo esc_html($member->post_title); ?></h3>
+                <h3><a href="<?php echo get_permalink($member->ID); ?>">
+                  <?php echo esc_html($member->post_title); ?>
+                </a></h3>
                 <h4><?php echo esc_html($fields['external_content_title'][0]); ?></h4>
             </div>
           <?php } ?>
