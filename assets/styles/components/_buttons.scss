@@ -36,4 +36,22 @@ $module: 'button';
       text-decoration: none;
     }
   }
+  &__full-width {
+    @include din(1.2em);
+    background: $red;
+    color: $white;
+    clear: both;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    transition: background, .2s;
+    &:hover {
+      background: $true-red;
+      color: $white;
+      cursor: hand;
+      cursor: pointer;
+    }
+  }
 }
