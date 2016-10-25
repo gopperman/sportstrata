@@ -19,7 +19,7 @@ $trainer_query = new WP_Query( array(
 
 $teams = array(
   'directors' => $director_query->get_posts(),
-  'coaches' => $coach_query->get_posts(),
+  'performance coaches' => $coach_query->get_posts(),
   'expert consultants' => $trainer_query->get_posts(),
 );
 
