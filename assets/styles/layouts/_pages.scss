@@ -1,0 +1,494 @@
+$home:  'home';
+$media: 'page-template-template-media';
+$team: 'page-template-template-team';
+$team-member: 'single-team-members';
+$gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
+$gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
+
+.page {
+  padding-top: 0;
+}
+
+.hero {
+  margin-top: $nav-offset;
+  padding: 25px 0;
+  min-height: 300px;
+}
+
+.about {
+  background: $navy;
+  font-family: 'DIN', 'sans-serif';
+  font-weight: bold;
+
+  .container-fluid {
+    width: 80%;
+    max-width: 820px;
+  }
+
+  p {
+    color: $seafoam;
+    font-size: 24px;
+    font-weight: 600;
+  }
+}
+
+.availability-strip, .clients {
+  background: $gray-light;
+  margin-bottom: 25px;
+  text-align: center;
+
+  p, div {
+    color: $gray;
+    line-height: 57px;
+    margin: 0 auto;
+  }
+
+  img {
+    display: inline-block;
+    margin: 1em;
+    vertical-align: middle;
+  }
+}
+
+.clients {
+  clear: both;
+  margin: 0;
+  padding: 25px 0;
+
+  p {
+    line-height: 1em;
+    margin-top: .6em;
+  }
+}
+
+.content-areas {
+  h2 {
+    text-align: center;
+  }
+}
+.content__area {
+  background-blend-mode: color-burn;
+  color: $white;
+  padding: 50px 10px;
+  position: relative;
+  text-align: center;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .button__cta {
+    &:hover {
+      background: $navy;
+      border-color: $navy;
+      color: $white;
+    }
+  }
+
+  &-title {
+    font-size: 36px;
+    font-weight: 600;
+  }
+  &:nth-child(1) {
+    background: url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(2) {
+    background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(3) {
+    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(4) {
+    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(5) {
+    background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(6) {
+    background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+}
+
+.#{$team-member} {
+  &__hero {
+    background: url(#{$asset-path}images/sports2-sm.jpg) no-repeat center center;
+    position: relative;
+    text-align: center;
+    @include cover();
+    &.hero {
+      margin: 0;
+      min-height: 95vw;
+    }
+
+    .centered {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    h1 {
+      @include din(10vw);
+      color: $white;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+  .team {
+    &__bio {
+      background: $gray-light;
+      padding-bottom: 50px;
+
+      &-card {
+        background: $white;
+        max-width: 900px;
+        padding: 25px 0 0;
+      }
+
+      &-text {
+        margin-bottom: 1em;
+      }
+    }
+  }
+
+  .headshot {
+    margin: .5em 0 1em 0;
+    width: 100%;
+  }
+
+  h2 {
+    @include din(1.4em);
+    color: $navy;
+    margin: 0;
+  }
+
+  h3 {
+    @include dense(1.4em);
+    color: $red;
+    margin: 0;
+  }
+}
+
+.#{$home}, .#{$team} {
+  .banner, .hero {
+    .container-fluid {
+      max-width: $constrain-home;
+    }
+  }
+
+  .button__cta {
+    margin-top: 1em;
+  }
+
+  .hero {
+    background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
+    margin: 0;
+    padding: $nav-offset 25px 25px;
+    position: relative;
+    text-align: left;
+    @include cover();
+
+    h1 {
+      @include din(1em);
+      color: $white;
+      margin-bottom: 0;
+    }
+
+    h2 {
+      @include dense(2em);
+      color: $white;
+      margin-top: 0;
+      max-width: 85%;
+    }
+
+    .centered {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 80%;
+    }
+  }
+}
+
+.#{$team} {
+  .team {
+    &__member {
+      background: $gray-light;
+      border-left: 4px solid $red;
+      padding-bottom: 15px;
+      position: relative;
+      transition: border-left, .1s;
+      &:hover {
+        border-left: 4px solid $true-red;
+      }
+    }
+
+    .row {
+      padding-bottom: 50px;
+    }
+
+    h2 {
+      @include din(2.4em);
+      color: $black;
+    }
+
+    h3, h4 {
+      padding-left: 15px;
+    }
+
+    h3 {
+      @include din(1.4em);
+      color: $navy;
+      margin: .8em 0 0 0;
+    }
+
+    h4 {
+      @include dense(1.4em);
+      color: $red;
+      margin: 0;
+
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.#{$media} {
+  .hero {
+    background: url(#{$asset-path}images/speaking-hero.png) no-repeat center center fixed;
+    margin:  0;
+    padding: 100px 25px 50px;
+    position: relative;
+    @include cover();
+
+    h1, h2 {
+      color: $white;
+    }
+  }
+
+  .overlay {
+    background: rgba($midnight, 0.7);
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 0;
+  }
+
+}
+
+.product {
+  text-align: center;
+
+  &__description {
+    padding-top: 25px;
+  }
+
+  .container-fluid {
+    max-width: 900px;
+  }
+
+  strong {
+    font-size: 24px;
+  }
+
+  p {
+    color: $white;
+    font-size: 22px;
+    margin: 0;
+  }
+
+  img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+  }
+}
+
+.featured-posts {
+  margin-top: 20px;
+  padding-bottom: 50px;
+
+  h4 {
+    color: $black;
+    display: inline-block;
+    margin-left: 15px;
+    width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+  strong {
+    font-weight: normal;
+    font-size: 18px;
+  }
+
+  img {
+    margin: 5px 0;
+    max-width: 100%;
+  }
+}
+
+.worksheets {
+  background: $gray-light;
+  padding: 30px 0 50px;
+  text-align: center;
+
+  p {
+    margin: 0;
+  }
+
+  a {
+    color: $midnight;
+  }
+
+  img {
+    display: block;
+    margin: 1em auto;
+  }
+
+  .row {
+    margin-top: 25px;
+  }
+}
+
+.worksheet {
+  &__link {
+    display: block;
+    margin-bottom: 1em;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .content-areas.row {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .hero {
+    min-height: 40vw;
+    background-attachment: fixed !important;
+  }
+
+  .#{$team-member} {
+    &__hero {
+      h1 {
+        font-size: 75px;
+      }
+      &.hero {
+        min-height: 48vw;
+      }
+    }
+  }
+
+  .#{$home}, .#{$team} {
+    .hero {
+      min-height: 90vh;
+      h1 {
+        @include din(1.4em);
+        color: $white;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        @include dense(4em);
+        color: $white;
+        margin-top: 0;
+      }
+    }
+  }
+
+  .excerpts {
+    text-align: left;
+  }
+
+  .testimonials, .featured-posts {
+    h4 {
+      margin-left: 0;
+      text-align: center;
+
+      &:before, &:after {
+        border-bottom: 1px solid $black;
+        display: inline-block;
+        content: " ";
+        float: left;
+        height: .5em;
+        width: 33%;
+      }
+      &:after {
+        float: right;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  .#{$team-member} {
+    &__hero {
+      background-attachment: fixed;
+      &.hero {
+        min-height: 32vw;
+      }
+    }
+  }
+
+  .content__area {
+    height: 33.3vw;
+    padding: 30px 0;
+    &-overlay {
+      background: rgba( $mint, .3 );
+      opacity: 0;
+      transition: all, .4s;
+      z-index: 999;
+      &:hover {
+        opacity: 1;
+      }
+    }
+    &:hover {
+      .content__area-title {
+        opacity: 0;
+      }
+      .hidden-md {
+        display: inline-block !important;
+      }
+    }
+
+    &-description {
+      width: 80%;
+    }
+
+    &-description,
+    &-title {
+      opacity: 1;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &-overlay {
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+    }
+  }
+}

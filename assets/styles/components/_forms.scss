@@ -1,0 +1,138 @@
+// Search form
+.search-form {
+  @extend .form-inline;
+}
+.search-form label {
+  font-weight: normal;
+  @extend .form-group;
+}
+.search-form .search-field {
+  @extend .form-control;
+}
+.search-form .search-submit {
+  @extend .btn;
+  @extend .btn-default;
+}
+
+// Contact Form
+$contact: 'contact';
+
+##{$contact} {
+  background: $white;
+  z-index: 999999;
+}
+
+.modal {
+
+  &-dialog {
+    margin: 0 auto;
+    max-width: 660px;
+    width: 90%;
+  }
+
+  &-content {
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    display: inline-table;
+  }
+
+  &-title {
+    margin-left: 15px;
+  }
+
+  &-header {
+    padding: 0;
+    border-bottom: 0;
+
+    .close {
+      color: $black;
+      font-size: 60px;
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      z-index: 99999;
+    }
+  }
+
+  &-body {
+    padding-top: 50px;
+
+    p.col-xs-12 {
+      margin: .5em 0 36px;
+    }
+
+    .contact-message p.col-xs-12:last-child {
+      margin-bottom: .5em;
+    }
+
+    p {
+      color: $navy;
+      font-size: 24px;
+      margin: .5em 0;
+      position: relative;
+    }
+    span + label {
+      background: $white;
+      position: absolute;
+      top: 0;
+      left: 15px;
+      transition: all, .2s;
+      width: 100%;
+      z-index: 0;
+    }
+  }
+}
+
+.wpcf7 {
+  &-text {
+    background: transparent;
+    border: 0;
+    border-bottom: 3px solid $navy;
+    color: $black;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+
+    &:focus {
+      outline: 0;
+      & + label {
+        top: -1em;
+      }
+    }
+  }
+
+  &-textarea {
+    border: 2px $navy dotted;
+    height: 120px;
+    width: 100%;
+
+    &:focus {
+      outline: 0;
+    }
+  }
+  &-submit {
+    background: $red;
+    border: 0;
+    border-radius: 4px;
+    color: $white;
+    float: right;
+    @include din(18px);
+    padding: 0 24px;
+    transition: all, .2s;
+    &:hover, &:active {
+      background: darken( $red, 10% );
+    }
+  }
+}
+
+.contact {
+  &-submit {
+    .wpcf7-form-control-wrap,
+    p {
+      display: inline-block;
+      float: left;
+      width: 50%;
+    }
+  }
+}

@@ -1,0 +1,44 @@
+$module: 'content-info';
+
+.#{$module} {
+  p {
+    font-size: 14px;
+    margin: 0;
+  }
+
+  #contact-info {
+    background: $navy;
+    padding: 20px 0;
+    text-align: center;
+
+    p {
+      color: $seafoam;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    a {
+      color: $red;
+      a:hover, a:active, a:focus {
+        color: $red;
+        text-decoration: underline;
+      }
+    }
+  }
+
+  #copyright {
+    background: $black;
+    a, a:active, a:focus, a:hover {
+      color: $mint;
+      text-decoration: underline;
+    }
+    p {
+      color: $seafoam;
+      display: inline-block;
+      width: 100%;
+    }
+  }
+  .alignleft, .alignright {
+    margin: 1em 20px 0;
+  }
+}

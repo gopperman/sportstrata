@@ -1,0 +1,17 @@
+.archive, .blog {
+
+  .page-header {
+    margin: 0;
+    border-bottom: 0;
+  }
+
+  article {
+    padding: 10px 0;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #f2f2f2;
+  }
+
+  h4 {
+    color: $black;
+  }
+}

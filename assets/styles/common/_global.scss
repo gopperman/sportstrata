@@ -1,0 +1,33 @@
+body {
+  padding-top: $nav-offset;
+  @include lato(14px);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.entry-title {
+  a, a:hover, a:active, a:focus {
+    color: $black;
+  }
+}
+
+.container-fluid {
+  max-width: 1024px
+}
+
+.embed__container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow:
+  hidden;
+  max-width: 100%;
+
+  iframe, object, embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100% !important;
+    height: 100% !important;
+  }
+}

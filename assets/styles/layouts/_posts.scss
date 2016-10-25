@@ -1,0 +1,45 @@
+.post, .author-about {
+  .container-fluid {
+    @include blog-container();
+  }
+}
+
+.post footer, .author-about {
+  @include text-style();
+  background: $purple;
+  color: $white;
+  margin: 0;
+  width: 100%;
+
+  .container-fluid {
+    padding: 25px 20px;
+  }
+}
+
+.post, .archive article {
+  img {
+    //Responsive image override
+    width: 100% !important;
+    height: auto !important;
+  }
+}
+
+.blog {
+  padding-top: 100px;
+  .entry-title {
+    margin-top: 0;
+  }
+}
+
+.author__meta {
+  font-weight: 600;
+
+  img {
+    border-radius: 200px;
+    display: block;
+    height: auto;
+    margin: 0 auto 20px;
+    max-width: 200px;
+    width: 100%;
+  }
+}

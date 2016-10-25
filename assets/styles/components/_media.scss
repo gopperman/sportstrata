@@ -1,0 +1,47 @@
+$module: 'media';
+
+.#{$module} {
+
+  &__videos {
+    padding: 50px 0;
+    text-align: center;
+
+    .container-fluid {
+      position: relative;
+    }
+
+    h2 {
+      background: $white;
+      display: block;
+      margin: 0 auto 25px;
+      padding: 0 20px;
+      width: 280px;
+
+      &:after {
+        border-bottom: 1px solid $midnight;
+        content: "";
+        display: block;
+        width: 100%;
+        position: absolute;
+        top: 0.5em;
+        left: 0;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__video {
+    position: relative;
+    height: 0;
+    padding-bottom: 56.25%; // for 16 x 9 videos
+    margin-bottom: 20px;
+
+    object, iframe, embed {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100% !important; //Override javascript-imposed width
+      height: 100% !important; //Override javascript-imposed height
+    }
+  }
+}

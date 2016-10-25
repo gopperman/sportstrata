@@ -1,0 +1,32 @@
+h1 {
+  @include dense(2.4px);
+  margin-top: .2em;
+}
+
+h2 {
+  @include dense(1.6em);
+}
+
+h3 {
+  @include dense(1.2em);
+}
+
+h4 {
+  @include din(1.1em);
+}
+
+h5 {
+  @include din(1em);
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+}
+
+p {
+  @include text-style();
+}
+
+a {
+  @include link-style();
+}

@@ -1,0 +1,57 @@
+$module: 'button';
+
+.#{$module} {
+  &__cat {
+    border: 1px solid $black;
+    border-radius: 4px;
+    display: inline-block;
+    font-weight: 600;
+    margin-bottom: 1em;
+    padding: 5px 15px 4px;
+    transition: all, .1s;
+
+    &:active, &:hover, &:focus {
+      background: $purple;
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  &__cta {
+    background: $red;
+    border: 2px solid $red;
+    border-radius: 20px;
+    color: $white;
+    display: inline-block;
+    font-weight: 600;
+    line-height: 1em;
+    padding: 10px 48px;
+    transition: all, .1s;
+
+    &:active, &:hover, &:focus {
+      background: transparent;
+      color: $red;
+      cursor: hand;
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+  &__full-width {
+    @include din(1.2em);
+    background: $red;
+    color: $white;
+    clear: both;
+    display: block;
+    padding: 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+    transition: background, .2s;
+    &:hover {
+      background: $true-red;
+      color: $white;
+      cursor: hand;
+      cursor: pointer;
+    }
+  }
+}
