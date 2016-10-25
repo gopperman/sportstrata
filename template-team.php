@@ -14,13 +14,13 @@ $coach_query = new WP_Query( array(
 
 $trainer_query = new WP_Query( array(
   'post_type' => 'team-members',
-  'category_name' => 'trainers',
+  'category_name' => 'expert-consultants',
 ));
 
 $teams = array(
   'directors' => $director_query->get_posts(),
   'coaches' => $coach_query->get_posts(),
-  'trainers' => $trainer_query->get_posts(),
+  'expert consultants' => $trainer_query->get_posts(),
 );
 
 $header_description = get_post_meta( get_the_ID(), 'header_description')[0];
