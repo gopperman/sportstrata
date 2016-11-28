@@ -388,6 +388,14 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     background-attachment: fixed !important;
   }
 
+  .team {
+    .col-md-4 {
+      &:nth-child(2n) {
+        clear: left;
+      }
+    }
+  }
+
   .#{$team-member} {
     &__hero {
       h1 {
@@ -412,7 +420,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
         @include dense(4em);
         color: $white;
         margin-top: 0;
-        max-width: 85%;
+        max-width: 95%;
       }
     }
   }
@@ -450,6 +458,19 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       }
     }
   }
+
+  .team {
+    .col-md-4 {
+      &:nth-child(2n) {
+        clear: none;
+      }
+      &:nth-child(3n+2) {
+        clear: left;
+      }
+    }
+  }
+
+
 
   .content__area {
     height: 33.3vw;
