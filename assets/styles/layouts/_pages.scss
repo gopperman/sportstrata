@@ -95,28 +95,28 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     @include cover();
   }
   &:nth-child(2) {
+    background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(3) {
     background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     background: $gradient1, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     @include cover();
   }
-  &:nth-child(3) {
-    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
-    background: $gradient2, url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
-    @include cover();
-  }
   &:nth-child(4) {
-    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
-    background: $gradient1, url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
-    @include cover();
-  }
-  &:nth-child(5) {
     background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
     background: $gradient2, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
     @include cover();
   }
+  &:nth-child(5) {
+    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    @include cover();
+  }
   &:nth-child(6) {
-    background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
-    background: $gradient1, url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
     @include cover();
   }
 }
@@ -211,7 +211,6 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       @include dense(2em);
       color: $white;
       margin-top: 0;
-      max-width: 85%;
     }
 
     .centered {
@@ -413,6 +412,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
         @include dense(4em);
         color: $white;
         margin-top: 0;
+        max-width: 85%;
       }
     }
   }
