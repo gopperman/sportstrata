@@ -101,12 +101,12 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
   }
   &:nth-child(3) {
     background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
-    background: $gradient1, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(4) {
     background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
-    background: $gradient2, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(5) {
