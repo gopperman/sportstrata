@@ -401,7 +401,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
   .#{$home}, .#{$team} {
     .hero {
-      min-height: 90vh;
+      min-height: 85vh;
       h1 {
         @include din(1.4em);
         color: $white;
