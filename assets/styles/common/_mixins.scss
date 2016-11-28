@@ -1,9 +1,9 @@
 @mixin link-style() {
-  color: $navy;
+  color: $red;
   text-decoration: none;
   transition: all, .1s;
   &:hover, &:active, &:focus {
-    color: $black;
+    color: $navy;
     text-decoration: underline;
   }
 }
