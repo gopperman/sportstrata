@@ -228,6 +228,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     &__member {
       background: $gray-light;
       border-left: 4px solid $red;
+      margin-bottom: 1.6em;
       padding-bottom: 15px;
       position: relative;
       transition: border-left, .1s;
@@ -237,7 +238,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     }
 
     .row {
-      padding-bottom: 50px;
+      padding-bottom: 25px;
     }
 
     h2 {
