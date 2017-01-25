@@ -1,0 +1,81 @@
+.sub-menu {
+  display: table;
+  width: auto;
+  padding: 0;
+
+  .menu-item {
+    display: block;
+    width: auto;
+    font-size: .75em;
+    line-height: .75em;
+
+    a {
+      display: block;
+    }
+  }
+}
+
+.menu-item {
+  &.menu-item-has-children {
+    a {
+      color: $red;
+    }
+    .sub-menu {
+      a {
+        color: $navy;
+        &:hover {
+          color: $white;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .menu-item {
+    position: relative;
+
+    &.menu-item-has-children {
+      a {
+        color: navy;
+        &:after {
+          content: " ▼";
+        }
+      }
+
+      .sub-menu {
+        a:after {
+          content: "";
+        }
+      }
+    }
+
+    .sub-menu {
+      display: none;
+    }
+
+    &:hover, &:active, a:active, a:hover, a:focus {
+      .sub-menu, & + .sub-menu {
+        background: $white;
+        display: inline-block;
+        padding: 0;
+        position: absolute;
+        right: 0;
+        top: $nav-offset;
+        width: 260px;
+
+        .menu-item {
+          font-size: 1em;
+          line-height: 1em;
+          margin: 0 auto;
+          width: 100%;
+
+          a {
+            display: block;
+            text-align: right;
+          }
+        }
+      }
+    }
+  }
+}
