@@ -2,11 +2,16 @@ $home:  'home';
 $media: 'page-template-template-media';
 $team: 'page-template-template-team';
 $team-member: 'single-team-members';
+$landing-page: 'page-template-template-landing-page';
 $gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
 $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
 .page {
   padding-top: 0;
+
+  .container-fluid {
+    max-width: 720px;
+  }
 }
 
 .hero {
@@ -179,6 +184,25 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     @include dense(1.4em);
     color: $red;
     margin: 0;
+  }
+}
+
+.#{$landing-page} {
+  .page-header {
+    margin: 0;
+    padding: 0;
+    border: 0;
+
+    img {
+      width: 100%;
+    }
+
+    .page__title {
+      font-family: 'DIN', 'sans-serif';
+      font-weight: bold;
+      font-size: 32px;
+      margin: 2em 0 0;
+    }
   }
 }
 
