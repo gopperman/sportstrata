@@ -12,6 +12,12 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
   .container-fluid {
     max-width: 720px;
   }
+
+  .banner {
+    .container-fluid {
+      max-width: 900px;
+    }
+  }
 }
 
 .hero {
