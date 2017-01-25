@@ -255,12 +255,6 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       padding-bottom: 15px;
       position: relative;
       transition: border-left, .1s;
-      h3 {
-        a {
-          color: $navy;
-        }
-      }
-
       &:hover {
         border-left: 4px solid $true-red;
       }
