@@ -68,6 +68,26 @@
   }
 }
 
+.hero {
+  position: relative;
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .page__title {
+      @include dense(4em);
+      color: $white;
+      font-family: 'DIN', 'sans-serif';
+      font-weight: bold;
+      font-size: 48px;
+      margin: 0;
+      text-align: center;
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .menu-primary-navigation {
     margin: 0 auto;

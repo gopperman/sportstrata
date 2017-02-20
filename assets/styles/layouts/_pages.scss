@@ -202,13 +202,6 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     img {
       width: 100%;
     }
-
-    .page__title {
-      font-family: 'DIN', 'sans-serif';
-      font-weight: bold;
-      font-size: 32px;
-      margin: 2em 0 0;
-    }
   }
 }
 
@@ -223,6 +216,10 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     margin-top: 1em;
   }
 
+  .centered {
+    width: 80%;
+  }
+
   .hero {
     background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
     margin: 0;
@@ -235,19 +232,6 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       @include din(1em);
       color: $white;
       margin-bottom: 0;
-    }
-
-    h2 {
-      @include dense(2em);
-      color: $white;
-      margin-top: 0;
-    }
-
-    .centered {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 80%;
     }
   }
 }
