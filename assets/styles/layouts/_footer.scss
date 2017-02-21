@@ -7,9 +7,13 @@ $module: 'content-info';
   }
 
   #contact-info {
-    background: $navy;
+    background: $midnight;
     padding: 20px 0;
     text-align: center;
+
+    .container-fluid {
+      max-width: 800px;
+    }
 
     h2 {
       @include dense(2.8em);
@@ -29,6 +33,52 @@ $module: 'content-info';
         color: $red;
         text-decoration: underline;
       }
+    }
+  }
+
+  #social {
+    background: $navy;
+    padding: 20px 0;
+    p {
+      color: $mint;
+      font-weight: bold;
+      font-size: 1.6em;
+      text-align: center;
+      line-height: 32px;
+    }
+
+    a {
+      display: inline-block;
+      border-radius: 20px;
+      background: $mint;
+      margin: 0 2px -6px;
+      padding: 10px;
+      position: relative;
+      height: 32px;
+      width: 32px;
+      transition: all, .2s;
+
+      &:first-child {
+        margin-left: 8px;
+      }
+
+      &:hover {
+        background: $midnight;
+
+        .social-icon {
+          fill: $mint;
+        }
+      }
+    }
+
+    .social-icon {
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: $navy;
+      transition: all, .2s;
     }
   }
 
