@@ -11,6 +11,12 @@ $module: 'content-info';
     padding: 20px 0;
     text-align: center;
 
+    h2 {
+      @include dense(2.8em);
+      color: $white;
+      margin: .5em 0 .5em 0;
+    }
+
     p {
       color: $seafoam;
       font-size: 1.4em;

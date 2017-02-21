@@ -1,7 +1,9 @@
 <footer class="content-info">
   <div id="contact-info">
-    <div class="container">
-      <p>Contact SportStrata at <a href="tel:212-991-1107">212-991-1107</a> or <a href="#" data-toggle="modal" data-target="#contact">by email</a>.</p>
+    <div class="container-fluid">
+      <h2>Contact Us</h2>
+      <p>Contact SportStrata at <a href="tel:212-991-1107">212-991-1107</a> or drop us a line:</p>
+      <?php echo do_shortcode( '[contact-form-7 id="4" title=""]' ); ?>
     </div>
   </div>
   <div id="copyright">
