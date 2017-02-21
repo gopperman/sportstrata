@@ -76,20 +76,6 @@
 
   // Contact Form Click Handlers
   jQuery(document).ready( function() {
-    jQuery('.wpcf7-text').on( 'focusin', function() {
-      var el = jQuery(this);
-      var label = el.parents('p').find('label');
-      jQuery(label).css("top", 40);
-    });
-
-    jQuery('.wpcf7-text').on( 'focusout', function() {
-      var el = jQuery(this);
-      if ( '' === el.val() ) {
-        var label= el.parents('p').find('label');
-        jQuery(label).css("top", 0);
-      }
-    });
-
     $('.practice-areas__nav--item').click(function() {
       var self = $(this);
       $('.practice-areas__nav--item').removeClass('practice-areas__nav--item-active');
