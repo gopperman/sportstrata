@@ -3,6 +3,7 @@ $media: 'page-template-template-media';
 $team: 'page-template-template-team';
 $team-member: 'single-team-members';
 $landing-page: 'page-template-template-landing-page';
+$default: 'page-template-default';
 $gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
 $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
@@ -193,9 +194,9 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
   }
 }
 
-.#{$landing-page} {
+.#{$landing-page}, .#{$default} {
   .page-header {
-    margin: 0;
+    margin: $nav-offset 0 0 0;
     padding: 0;
     border: 0;
 
