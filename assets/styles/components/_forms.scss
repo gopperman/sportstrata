@@ -32,8 +32,20 @@ $contact: 'contact';
     margin-top: 1em;
   }
 
+  & .sent {
+    section {
+      display: none;
+    }
+    .wpcf7-response-output {
+      color: $white;
+      font-size: 1.6em;
+      padding: 16px;
+    }
+  }
+
   &-text {
     border: 2px $mint solid;
+    color: $midnight;
     max-width: 100%;
     transition: all, .2s;
 
@@ -44,6 +56,7 @@ $contact: 'contact';
 
   &-textarea {
     border: 4px $mint solid;
+    color: $midnight;
     height: 120px;
     width: 100%;
     transition: all, .2s;
