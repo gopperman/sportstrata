@@ -2,6 +2,7 @@
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="pWFiX1UOKH-6Arud1r8CypLzfbzmMvCVkRwrzy5UcN4" />
 
   <?php wp_head(); ?>
 
