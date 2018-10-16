@@ -18,9 +18,15 @@
     </main>
     <aside class="col-md-5">
       <h4>Post Categories</h4>
-      <?php foreach ( $categories as $cat ) { ?>
-        <a class="button__cat" href="<?= get_category_link( $cat->cat_ID ); ?>"><?= $cat->name ?></a>
-      <? } ?>
+      <?php $filtered_categories = array(
+          "Directors",
+          "Mental Performance Coaches",
+          "SportStrata Consultants");
+        foreach ( $categories as $cat ) {
+          if (!in_array($cat->name, $filtered_categories)) { ?>
+            <a class="button__cat" href="<?= get_category_link( $cat->cat_ID ); ?>"><?= $cat->name ?></a>
+          <?php } ?>
+      <?php } ?>
     </aside>
   </div>
 </div>

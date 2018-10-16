@@ -1,26 +1,26 @@
 @mixin link-style() {
-  color: $purple;
+  color: $red;
   text-decoration: none;
   transition: all, .1s;
   &:hover, &:active, &:focus {
-    color: $midnight;
+    color: $navy;
     text-decoration: underline;
   }
 }
 
 @mixin nav-link-style() {
-  color: $black;
+  color: $navy;
   font-size: 16px;
   font-weight: 600;
   transition: all, .1s;
   &:hover, &:active, &:focus {
-    color: $purple;
+    color: $black;
     text-decoration: none;
   }
 }
 
 @mixin text-style() {
-  color: $gray;
+  color: $black;
   font-size: 18px;
   line-height: 1.6em;
   margin: 1.6em 0;

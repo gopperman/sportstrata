@@ -3,6 +3,6 @@
       <h2 class="entry-title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
     </header>
     <div class="entry-content">
-      <?= the_content( '...continue reading' , false ); ?>
+      <?= the_excerpt( '...continue reading' , false ); ?>
     </div>
 </article>

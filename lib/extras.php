@@ -34,10 +34,10 @@ add_filter('excerpt_more', __NAMESPACE__ . '\\excerpt_more');
 
 /** Hook up the contact form **/
 function contact_form_attributes( $atts, $item, $args ) {
-  if ($item->post_title === 'Contact') {
+/*  if ($item->post_title === 'Contact') {
     $atts['data-toggle'] = 'modal';
     $atts['data-target'] = '#contact';
-  }
+  }*/
 
   return $atts;
 }

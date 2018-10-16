@@ -1,9 +1,24 @@
 $home:  'home';
-$book:  'page-template-template-book';
 $media: 'page-template-template-media';
+$team: 'page-template-template-team';
+$team-member: 'single-team-members';
+$landing-page: 'page-template-template-landing-page';
+$default: 'page-template-default';
+$gradient1: linear-gradient(to right, rgba($red,.7) 0%, rgba($red,.7) 100%);
+$gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 
 .page {
   padding-top: 0;
+
+  .container-fluid {
+    max-width: 900px;
+  }
+
+  .banner {
+    .container-fluid {
+      max-width: 1200px;
+    }
+  }
 }
 
 .hero {
@@ -13,7 +28,9 @@ $media: 'page-template-template-media';
 }
 
 .about {
-  background: $purple;
+  background: $navy;
+  font-family: 'DIN', 'sans-serif';
+  font-weight: bold;
 
   .container-fluid {
     width: 80%;
@@ -21,43 +38,176 @@ $media: 'page-template-template-media';
   }
 
   p {
-    color: $white;
+    color: $seafoam;
     font-size: 24px;
     font-weight: 600;
   }
 }
 
+.availability-strip, .clients {
+  background: $gray-light;
+  margin-bottom: 25px;
+  text-align: center;
+
+  p, div {
+    color: $gray;
+    line-height: 57px;
+    margin: 0 auto;
+  }
+
+  img {
+    display: inline-block;
+    margin: 1em;
+    vertical-align: middle;
+  }
+}
+
+.clients {
+  clear: both;
+  margin: 0;
+  padding: 25px 0;
+
+  p {
+    line-height: 1em;
+    margin-top: .6em;
+  }
+}
+
+.content-areas {
+  h2 {
+    text-align: center;
+  }
+}
 .content__area {
+  background-blend-mode: color-burn;
   color: $white;
   padding: 50px 10px;
   position: relative;
   text-align: center;
 
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .button__cta {
+    &:hover {
+      background: $navy;
+      border-color: $navy;
+      color: $white;
+    }
+  }
+
   &-title {
     font-size: 36px;
     font-weight: 600;
   }
-
-  &:first-child {
-    background: url(#{$asset-path}images/practicearea-sports.jpg) no-repeat center center;
+  &:nth-child(1) {
+    background: url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/sports2-sq.jpg) no-repeat center center;
     @include cover();
   }
   &:nth-child(2) {
-    background: url(#{$asset-path}images/practicearea-mit.jpg) no-repeat center center;
+    background: url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/performance-sq.jpg) no-repeat center center;
     @include cover();
   }
-  &:last-child {
-    background: url(#{$asset-path}images/practicearea-cbt.jpg) no-repeat center center;
+  &:nth-child(3) {
+    background: url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/business-sq.jpg) no-repeat center center;
     @include cover();
   }
-
-  h2 {
-    margin-bottom: 20px;
+  &:nth-child(4) {
+    background: url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/healthcare-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(5) {
+    background: url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    background: $gradient2, url(#{$asset-path}images/firstresponder-sq.jpg) no-repeat center center;
+    @include cover();
+  }
+  &:nth-child(6) {
+    background: url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    background: $gradient1, url(#{$asset-path}images/gaming-sq.jpg) no-repeat center center;
+    @include cover();
   }
 }
 
-.#{$home} {
-  .banner {
+.#{$team-member} {
+  &__hero {
+    background: url(#{$asset-path}images/sports2-sm.jpg) no-repeat center center;
+    position: relative;
+    text-align: center;
+    @include cover();
+    &.hero {
+      margin: 0;
+      min-height: 95vw;
+    }
+
+    .centered {
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 100%;
+    }
+
+    h1 {
+      @include din(10vw);
+      color: $white;
+      margin-top: 0;
+      text-transform: uppercase;
+    }
+  }
+  .team {
+    &__bio {
+      background: $gray-light;
+      padding-bottom: 50px;
+
+      &-card {
+        background: $white;
+        max-width: 900px;
+        padding: 25px 0 0;
+      }
+
+      &-text {
+        margin: 2em 0;
+      }
+    }
+  }
+
+  .headshot {
+    margin: .5em 0 1em 0;
+    width: 100%;
+  }
+
+  h2 {
+    @include din(1.4em);
+    color: $navy;
+    margin: 0;
+  }
+
+  h3 {
+    @include dense(1.4em);
+    color: $red;
+    margin: 0;
+  }
+}
+
+.#{$landing-page}, .#{$default} {
+  .page-header {
+    margin: $nav-offset 0 0 0;
+    padding: 0;
+    border: 0;
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.#{$home}, .#{$team} {
+  .hero {
     .container-fluid {
       max-width: $constrain-home;
     }
@@ -67,27 +217,68 @@ $media: 'page-template-template-media';
     margin-top: 1em;
   }
 
-  .hero__video {
-    display: none;
+  .centered {
+    width: 80%;
   }
 
   .hero {
-    background: url(#{$asset-path}/images/home-hero.jpg) no-repeat center center fixed;
+    background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
     margin: 0;
     padding: $nav-offset 25px 25px;
     position: relative;
     text-align: left;
     @include cover();
 
-    h2 {
-      margin-top: 0;
+    h1 {
+      @include din(1em);
+      color: $white;
+      margin-bottom: 0;
+    }
+  }
+}
+
+.#{$team} {
+  .team {
+    &__member {
+      background: $gray-light;
+      border-left: 4px solid $red;
+      margin-bottom: 1.6em;
+      padding-bottom: 15px;
+      position: relative;
+      transition: border-left, .1s;
+      &:hover {
+        border-left: 4px solid $true-red;
+      }
     }
 
-    .centered {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      width: 80%;
+    .row {
+      padding-bottom: 25px;
+    }
+
+    h2 {
+      @include din(2.4em);
+      color: $black;
+    }
+
+    h3, h4 {
+      padding-left: 15px;
+    }
+
+    h3 {
+      @include din(1.4em);
+      color: $navy;
+      margin: .8em 0 0 0;
+    }
+
+    h4 {
+      @include dense(1.4em);
+      color: $red;
+      margin: 0;
+
+    }
+
+    img {
+      width: 100%;
     }
   }
 }
@@ -116,31 +307,7 @@ $media: 'page-template-template-media';
   }
 
 }
-.#{$book} {
-	.hero {
-		background: url(#{$asset-path}images/book-hero.jpg) no-repeat center center fixed;
-    margin: $nav-offset 0 0 0;
-    @include cover();
-  }
-  .availability-strip {
-    background: $gray-light;
-    margin-bottom: 25px;
-    text-align: center;
 
-    p {
-      line-height: 57px;
-      margin: 0 auto;
-    }
-
-    img {
-      display: inline-block;
-      margin: 1em;
-      vertical-align: middle;
-    }
-  }
-}
-
-.#{$book} .hero,
 .product {
   text-align: center;
 
@@ -169,43 +336,7 @@ $media: 'page-template-template-media';
   }
 }
 
-.product {
-  background: $white;
-  padding: 50px 0 25px;
-
-  p {
-    color: $gray;
-  }
-
-  .button__cta {
-    margin-top: 1em;
-  }
-}
-
-.excerpts {
-  text-align: center;
-
-  h4 {
-    margin: 2em 0 0;
-    a {
-      color: $purple;
-      &:active, &:hover, &:focus {
-        color: $purple;
-      }
-    }
-  }
-  p {
-    margin: 0;
-  }
-  a {
-    color: $black;
-    &:active, &:hover, &:focus {
-      color: $black;
-      text-decoration: underline;
-    }
-  }
-}
-.testimonials, .featured-posts {
+.featured-posts {
   margin-top: 20px;
   padding-bottom: 50px;
 
@@ -267,31 +398,44 @@ $media: 'page-template-template-media';
   }
 }
 @media only screen and (min-width: 768px) {
-  .#{$book} .hero,
-  .product {
-    text-align: left;
-  }
-
   .hero {
-    min-height: 36vw;
+    min-height: 40vw;
+    background-attachment: fixed !important;
   }
 
-  .#{$home} {
-    .hero {
-      min-height: 90vh;
+  .team {
+    .col-md-4 {
+      &:nth-child(2n) {
+        clear: left;
+      }
     }
   }
 
-  .#{$book} {
-    .button__cta,
-    .button__iBooks {
-      float: left;
-      margin-right: 10px;
+  .#{$team-member} {
+    &__hero {
+      h1 {
+        font-size: 75px;
+      }
+      &.hero {
+        min-height: 48vw;
+      }
     }
+  }
 
+  .#{$home}, .#{$team} {
     .hero {
-      .button__cta {
-        margin-top:1em;
+      min-height: 85vh;
+      h1 {
+        @include din(1.4em);
+        color: $white;
+        margin-bottom: 0;
+      }
+
+      h2 {
+        @include dense(4em);
+        color: $white;
+        margin-top: 0;
+        max-width: 95%;
       }
     }
   }
@@ -321,41 +465,33 @@ $media: 'page-template-template-media';
 }
 
 @media only screen and (min-width: 992px) {
-  .#{home} {
-    .hero {
-      background: rgba($midnight,.7);
-      text-align: center;
+  .#{$team-member} {
+    &__hero {
+      background-attachment: fixed;
+      &.hero {
+        min-height: 32vw;
+      }
+    }
+  }
 
-      h1, h2 {
-        color: $white;
+  .team {
+    .col-md-4 {
+      &:nth-child(2n) {
+        clear: none;
       }
-      .centered {
-        width: 100%;
+      &:nth-child(3n+2) {
+        clear: left;
       }
-    }
-    .hero__video {
-      display: block;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      min-width: 100%;
-      min-height: 100%;
-      width: auto;
-      height: auto;
-      z-index: -100;
-      transform: translate(-50%, -50%);
     }
   }
-  .#{$book} {
-    .hero__description {
-      padding-top: 50px;
-    }
-  }
+
+
 
   .content__area {
     height: 33.3vw;
     padding: 30px 0;
     &-overlay {
+      background: rgba( $mint, .3 );
       opacity: 0;
       transition: all, .4s;
       z-index: 999;
@@ -371,21 +507,11 @@ $media: 'page-template-template-media';
         display: inline-block !important;
       }
     }
-    &:first-child {
-      .content__area-overlay {
-        background: rgba( darken( $blue, 20% ), .7 );
-      }
+
+    &-description {
+      width: 80%;
     }
-    &:nth-child(2) {
-      .content__area-overlay {
-        background: rgba( $yellow, .7 );
-      }
-    }
-    &:last-child {
-      .content__area-overlay {
-        background: rgba( darken( $red, 20% ), .7 );
-      }
-    }
+
     &-description,
     &-title {
       opacity: 1;

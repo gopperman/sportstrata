@@ -1,6 +1,6 @@
 body {
   padding-top: $nav-offset;
-  font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  @include lato(14px);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -12,7 +12,7 @@ body {
 }
 
 .container-fluid {
-  max-width: 1024px
+  max-width: 1200px;
 }
 
 .embed__container {

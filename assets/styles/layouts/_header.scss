@@ -1,6 +1,5 @@
 .banner {
   background: $white;
-  border-bottom: 1px solid rgba($midnight, .4);
   color: $black;
   height: 42px;
   opacity: .95;
@@ -17,14 +16,21 @@
   font-weight: 600;
   padding: 10px 0;
   text-transform: uppercase;
+
+  img {
+    width: 260px;
+  }
 }
 
 .nav {
-  li>a:focus,
-  li>a:hover {
-    background: $purple;
-    color: $white;
-    transition: all, .2s;
+  li>a {
+    padding: 11px 15px;
+    &:focus,
+    &:hover {
+      background: $navy;
+      color: $white;
+      transition: all, .2s;
+   }
   }
 
   &-primary {
@@ -35,7 +41,7 @@
 
 .navbar {
   &-toggle {
-    border: 1px solid $midnight;
+    border: 1px solid $navy;
     margin: 5px 0 0;
     padding: 6px;
     position: relative;
@@ -56,7 +62,33 @@
   a {
     @include link-style();
     @include nav-link-style();
+    @include din(1em);
     padding: 0 15px;
+    text-transform: uppercase;
+  }
+}
+
+.hero {
+  position: relative;
+
+  .centered {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .page__title {
+      @include dense(4em);
+      color: $white;
+      font-family: 'DIN', 'sans-serif';
+      font-weight: bold;
+      font-size: 48px;
+      margin: 0;
+      text-align: center;
+  }
+
+  h2 {
+    color: $white;
   }
 }
 

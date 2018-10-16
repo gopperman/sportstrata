@@ -82,9 +82,9 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(!enabled.failStyleTask, plumber());
     })
-    .pipe(function() {
+    /*.pipe(function() {
       return gulpif(enabled.maps, sourcemaps.init());
-    })
+    })*/
     .pipe(function() {
       return gulpif('*.scss', sass({
         outputStyle: 'nested', // libsass doesn't support expanded yet
@@ -107,11 +107,11 @@ var cssTasks = function(filename) {
     .pipe(function() {
       return gulpif(enabled.rev, rev());
     })
-    .pipe(function() {
+    /*.pipe(function() {
       return gulpif(enabled.maps, sourcemaps.write('.', {
         sourceRoot: 'assets/styles/'
       }));
-    })();
+    })*/();
 };
 
 // ### JS processing pipeline

@@ -1,11 +1,6 @@
 $module: 'content-info';
 
 .#{$module} {
-  a, a:hover, a:active, a:focus {
-    color: $gray;
-    text-decoration: underline;
-  }
-
   p {
     font-size: 14px;
     margin: 0;
@@ -16,24 +11,85 @@ $module: 'content-info';
     padding: 20px 0;
     text-align: center;
 
-    p {
+    .container-fluid {
+      max-width: 800px;
+    }
+
+    h2 {
+      @include dense(2.8em);
       color: $white;
+      margin: .5em 0 .5em 0;
+    }
+
+    p {
+      color: $seafoam;
       font-size: 1.4em;
       font-weight: bold;
     }
 
     a {
-      color: $purple;
+      color: $red;
       a:hover, a:active, a:focus {
-        color: $purple;
+        color: $red;
         text-decoration: underline;
       }
     }
   }
 
+  #social {
+    background: $navy;
+    padding: 20px 0;
+    p {
+      color: $mint;
+      font-weight: bold;
+      font-size: 1.6em;
+      text-align: center;
+      line-height: 32px;
+    }
+
+    a {
+      display: inline-block;
+      border-radius: 20px;
+      background: $mint;
+      margin: 0 2px -6px;
+      padding: 10px;
+      position: relative;
+      height: 32px;
+      width: 32px;
+      transition: all, .2s;
+
+      &:first-child {
+        margin-left: 8px;
+      }
+
+      &:hover {
+        background: $midnight;
+
+        .social-icon {
+          fill: $mint;
+        }
+      }
+    }
+
+    .social-icon {
+      height: 32px;
+      width: 32px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      fill: $navy;
+      transition: all, .2s;
+    }
+  }
+
   #copyright {
     background: $black;
+    a, a:active, a:focus, a:hover {
+      color: $mint;
+      text-decoration: underline;
+    }
     p {
+      color: $seafoam;
       display: inline-block;
       width: 100%;
     }

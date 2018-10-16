@@ -17,112 +17,66 @@
 // Contact Form
 $contact: 'contact';
 
-##{contact} {
-  background: $white;
-  z-index: 999999;
-}
-
-.modal {
-
-  &-dialog {
-    margin: 0 auto;
-    max-width: 660px;
-    width: 90%;
-  }
-
-  &-content {
-    background: transparent;
-    border: 0;
-    box-shadow: none;
-    display: inline-table;
-  }
-
-  &-title {
-    margin-left: 15px;
-  }
-
-  &-header {
-    padding: 0;
-    border-bottom: 0;
-
-    .close {
-      color: $midnight;
-      font-size: 60px;
-      position: absolute;
-      right: 10px;
-      top: 10px;
-      z-index: 99999;
-    }
-  }
-
-  &-body {
-    padding-top: 50px;
-
-    p.col-xs-12 {
-      margin: .5em 0 36px;
-    }
-
-    .contact-message p.col-xs-12:last-child {
-      margin-bottom: .5em;
-    }
-
-    p {
-      color: $purple;
-      font-size: 24px;
-      margin: .5em 0;
-      position: relative;
-    }
-    span + label {
-      background: $white;
-      position: absolute;
-      top: 0;
-      left: 15px;
-      transition: all, .2s;
-      width: 100%;
-      z-index: 0;
-    }
-  }
-}
-
 .wpcf7 {
+  text-align: left;
+
+  section {
+    margin: 25px 0;
+  }
+
+  label {
+    display: block;
+  }
+
+  .col-xs-12 {
+    margin-top: 1em;
+  }
+
+  & .sent {
+    section {
+      display: none;
+    }
+    .wpcf7-response-output {
+      color: $white;
+      font-size: 1.6em;
+      padding: 16px;
+    }
+  }
+
   &-text {
-    background: transparent;
-    border: 0;
-    border-bottom: 3px solid $purple;
-    color: $black;
-    position: relative;
+    border: 2px $mint solid;
+    color: $midnight;
     width: 100%;
-    z-index: 1;
+    transition: all, .2s;
 
     &:focus {
-      outline: 0;
-      & + label {
-        top: -1em;
-      }
+      border: 2px $seafoam solid;
     }
   }
 
   &-textarea {
-    border: 2px $purple dotted;
+    border: 4px $mint solid;
+    color: $midnight;
     height: 120px;
     width: 100%;
+    transition: all, .2s;
 
     &:focus {
       outline: 0;
+      border: 4px $seafoam solid;
     }
   }
   &-submit {
-    background: $purple;
+    background: $red;
     border: 0;
     border-radius: 4px;
     color: $white;
     float: right;
-    font-family: 'Hind', sans-serif;
-    font-size: 18px;
-    padding: 0 24px;
+    @include din(18px);
+    padding: 4px 60px;
     transition: all, .2s;
     &:hover, &:active {
-      background: darken( $purple, 10% );
+      background: darken( $red, 10% );
     }
   }
 }
@@ -134,6 +88,12 @@ $contact: 'contact';
       display: inline-block;
       float: left;
       width: 50%;
+    }
+  }
+
+  .contact-info {
+    input {
+      width: 90%;
     }
   }
 }

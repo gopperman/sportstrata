@@ -1,5 +1,90 @@
+//Font Families
+$lato: 'Lato', sans-serif;
+$dense: 'Dense', sans-serif;
+$din: 'DIN', sans-serif;
+
+@font-face {
+  font-family: 'Dense';
+  src: url(#{$asset-path}fonts/Dense-Regular.eot);
+  src: url(Dense-Regular.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/Dense-Regular.woff) format('woff'),
+    url(#{$asset-path}fonts/Dense-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(#{$asset-path}fonts/Lato-LightItalic.eot);
+  src: url(#{$asset-path}fonts/Lato-LightItalic.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/Lato-LightItalic.woff) format('woff'),
+    url(#{$asset-path}fonts/Lato-LightItalic.ttf) format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(#{$asset-path}fonts/Lato-Medium.eot);
+  src: url(#{$asset-path}fonts/Lato-Medium.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/Lato-Medium.woff) format('woff'),
+    url(#{$asset-path}fonts/Lato-Medium.ttf) format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(#{$asset-path}fonts/Lato-MediumItalic.eot);
+  src: url(#{$asset-path}fonts/Lato-MediumItalic.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/Lato-MediumItalic.woff) format('woff'),
+    url(#{$asset-path}fonts/Lato-MediumItalic.ttf) format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(#{$asset-path}fonts/Lato-Light.eot);
+  src: url(#{$asset-path}fonts/Lato-Light.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/Lato-Light.woff) format('woff'),
+    url(#{$asset-path}fonts/Lato-Light.ttf) format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'DIN';
+  src: url(#{$asset-path}fonts/DIN-Bold.eot);
+  src: url(#{$asset-path}fonts/DIN-Bold.eot?#iefix) format('embedded-opentype'),
+    url(#{$asset-path}fonts/DIN-Bold.woff) format('woff'),
+    url(#{$asset-path}fonts/DIN-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin lato($size) {
+  font-family: $lato;
+  font-size: $size;
+  font-weight: 300;
+}
+
+@mixin dense($size) {
+  font-family: $dense;
+  font-size: $size;
+  font-weight: normal;
+  letter-spacing: 1px;
+}
+
+@mixin din($size) {
+  font-family: $din;
+  font-size: $size;
+  font-weight: bold;
+  letter-spacing: 2.5px;
+}
+
 @mixin hind($size, $weight) {
-  font-family: 'Hind', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   font-size: $size;
   font-weight: $weight;
 }

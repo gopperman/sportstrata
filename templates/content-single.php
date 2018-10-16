@@ -16,6 +16,7 @@
             <?php echo wp_kses_post( get_avatar( get_the_author_meta( 'email' ), 256 ) ); ?>
           </div>
           <div class="col-sm-9">
+            <h3 class="author__name"><?php wp_kses_post(the_author()); ?></h3>
             <?= the_author_meta( 'description' ); ?>
           </div>
         </div>
