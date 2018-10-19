@@ -225,6 +225,13 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
     }
   }
 }
+.#{$home} {
+  .hero {
+    .centered {
+      text-align: left;
+    }
+  }
+}
 
 .#{$home}, .#{$team}, .archive, .blog {
   .button__cta {
