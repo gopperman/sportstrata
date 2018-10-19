@@ -1,44 +1,19 @@
 $module: 'content-info';
 
 .#{$module} {
+  background: $gray-light;
+  //display: flex;
+
   p {
     font-size: 14px;
     margin: 0;
   }
 
-  #contact-info {
-    background: $midnight;
-    padding: 20px 0;
-    text-align: center;
-
-    .container-fluid {
-      max-width: 800px;
-    }
-
-    h2 {
-      @include dense(2.8em);
-      color: $white;
-      margin: .5em 0 .5em 0;
-    }
-
-    p {
-      color: $seafoam;
-      font-size: 1.4em;
-      font-weight: bold;
-    }
-
-    a {
-      color: $red;
-      a:hover, a:active, a:focus {
-        color: $red;
-        text-decoration: underline;
-      }
-    }
-  }
-
   #social {
     background: $navy;
+    clear: both;
     padding: 20px 0;
+
     p {
       color: $mint;
       font-weight: bold;
@@ -96,5 +71,53 @@ $module: 'content-info';
   }
   .alignleft, .alignright {
     margin: 1em 20px 0;
+  }
+}
+
+.contact {
+  &__headquarters {
+    padding-left: 30px;
+
+    p {
+      margin: .5em 0;
+    }
+  }
+
+  &__hours {
+    list-style-type: none;
+    padding: 0;
+  }
+
+  &__form {
+    background: $midnight;
+    padding-bottom: 40px;
+
+    h2 {
+      padding-left: 15px;
+    }
+
+    p {
+      color: $white;
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    h2 {
+      @include dense(2.8em);
+      color: $white;
+      margin: 15px 0 0;
+    }
+  }
+
+  &__map {
+    background: url('/app/themes/sportstrata/assets/images/map.png') no-repeat center center;
+    background-size: cover;
+    min-height: 300px;
+  }
+}
+
+@media(min-width:990px) {
+  #contact-info {
+    display: flex;
   }
 }

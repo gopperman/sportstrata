@@ -1,8 +1,25 @@
 <footer class="content-info">
-  <div id="contact-info">
-    <div class="container-fluid">
+  <div id="contact-info" class="row row-eq-height">
+    <div class="contact__map col-sm-6 col-md-5 col-lg-5">
+    </div>
+    <div class="contact__headquarters col-sm-6 col-md-3 col-lg-2">
+      <h2>Our Headquarters</h2>
+      <p><b>North America:</b><br />
+      138 W 25th Street, 10th Floor<br />
+      New York, NY 10001</p>
+
+      <p><b>Phone:</b> (212) 991-1107</p>
+      <p><b>Email:</b> team@sportstrata.com</p>
+
+      <h2>Working Hours:</h2>
+      <ul class="contact__hours">
+        <li><b>Mon-Thu:</b> 9AM to 8PM
+        <li><b>Friday:</b> 9AM to 5PM
+        <li><b>Sat-Sun:</b> Closed
+      </ul>
+    </div>
+    <div class="contact__form col-xs-12 col-md-4 col-lg-5">
       <h2>Book an Appointment</h2>
-      <p>Contact SportStrata at <a href="tel:212-991-1107">212-991-1107</a> or drop us a line:</p>
       <?php echo do_shortcode( '[contact-form-7 id="4" title=""]' ); ?>
     </div>
   </div>
