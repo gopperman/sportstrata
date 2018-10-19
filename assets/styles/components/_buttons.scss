@@ -28,12 +28,15 @@ $module: 'button';
     padding: 10px 48px;
     transition: all, .1s;
 
+    a, a:active, a:hover, a:focus {
+      color: $white;
+      text-decoration: none;
+    }
+
     &:active, &:hover, &:focus {
-      background: transparent;
-      color: $red;
+      background: lighten($red, 10%);
       cursor: hand;
       cursor: pointer;
-      text-decoration: none;
     }
   }
   &__full-width {
