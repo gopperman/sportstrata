@@ -25,7 +25,10 @@
 }
 
 .blog {
-  padding-top: 100px;
+
+  &__container {
+    padding-top: 50px;
+  }
 
   .entry-title {
     margin-top: 0;

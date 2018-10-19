@@ -1,6 +1,6 @@
 <?php $categories = get_categories(); ?>
-<div class="container-fluid">
-  <div class="row">
+<?php get_template_part('templates/page', 'header'); ?>
+<div class="container-fluid blog__container">
     <main class="col-md-7">
       <?php while (have_posts()) : the_post(); ?>
         <?php get_template_part('templates/content', 'excerpt'); ?>
@@ -28,5 +28,4 @@
           <?php } ?>
       <?php } ?>
     </aside>
-  </div>
 </div>

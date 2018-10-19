@@ -1,5 +1,5 @@
 <footer class="content-info">
-  <div id="contact-info" class="row row-eq-height">
+  <div id="contact-info">
     <div class="contact__map col-sm-6 col-md-5 col-lg-5">
     </div>
     <div class="contact__headquarters col-sm-6 col-md-3 col-lg-2">

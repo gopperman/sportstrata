@@ -74,9 +74,11 @@
   .centered {
     position: absolute;
     top: 50%;
+    text-align: center;
     transform: translateY(-50%);
     width: 100%;
   }
+
   .page__title {
       @include dense(4em);
       color: $white;

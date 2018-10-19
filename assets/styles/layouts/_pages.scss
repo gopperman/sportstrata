@@ -22,9 +22,24 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 }
 
 .hero {
-  margin-top: $nav-offset;
-  padding: 25px 0;
   min-height: 300px;
+  background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
+  margin: 0;
+  margin-top: $nav-offset;
+  padding: 25px 25px;
+  position: relative;
+  text-align: left;
+  @include cover();
+
+  .container-fluid {
+    max-width: $constrain-home;
+  }
+
+  h1 {
+    @include din(1em);
+    color: $white;
+    margin-bottom: 0;
+  }
 }
 
 .about {
@@ -74,6 +89,11 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 }
 
 .content-areas {
+  &__headline {
+    font-size: 3em;
+    margin: .75em 0;
+  }
+
   h2 {
     text-align: center;
   }
@@ -206,34 +226,9 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
   }
 }
 
-.#{$home}, .#{$team} {
-  .hero {
-    .container-fluid {
-      max-width: $constrain-home;
-    }
-  }
-
+.#{$home}, .#{$team}, .archive, .blog {
   .button__cta {
     margin-top: 1em;
-  }
-
-  .centered {
-    width: 80%;
-  }
-
-  .hero {
-    background: url(#{$asset-path}/images/sports-lg.jpg) no-repeat center center;
-    margin: 0;
-    padding: $nav-offset 25px 25px;
-    position: relative;
-    text-align: left;
-    @include cover();
-
-    h1 {
-      @include din(1em);
-      color: $white;
-      margin-bottom: 0;
-    }
   }
 }
 
@@ -399,7 +394,7 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
 }
 @media only screen and (min-width: 768px) {
   .hero {
-    min-height: 40vw;
+    min-height: 32vw;
     background-attachment: fixed !important;
   }
 
@@ -484,8 +479,6 @@ $gradient2: linear-gradient(to right, rgba($navy,.7) 0%, rgba($navy,.7) 100%);
       }
     }
   }
-
-
 
   .content__area {
     height: 33.3vw;

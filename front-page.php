@@ -22,7 +22,7 @@
   </div>
 </div>
 <div class="content-areas">
-  <h2>Our Focus</h2>
+  <h2 class="content-areas__headline">Our Focus</h2>
   <div class="content-areas__wrapper">
     <?php foreach ( $content as $area ) { ?>
       <div class="col-md-4 content__area">

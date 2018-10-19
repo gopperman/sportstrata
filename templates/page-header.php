@@ -5,7 +5,6 @@ $thumb_url = ( strpos( $thumb_url_array[0], 'default.png' ) ) ? '/app/themes/spo
 ?>
 
 <div class="page-header hero" id="content-header">
-  <img src="<?= $thumb_url ?>" role="presentation" alt="" />
   <div class="centered">
       <h2 class="page__title"><?= Titles\title(); ?></h2>
   </div>
